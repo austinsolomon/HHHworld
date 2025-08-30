@@ -1,0 +1,97 @@
+/home/pg1221/miniconda3/envs/HunyuanWorld/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/home/pg1221/safe/hyworld/Real-ESRGAN/realesrgan/utils.py:63: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  loadnet = torch.load(model_path, map_location=torch.device('cpu'))
+Output will be saved to: test_results/case2
+=============  now loading models ===============
+=============  load Super-Resolution models done 
+=============  load Segmentation models done ====
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 33.39it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00, 15.34it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s][A
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00, 12.55it/s][ALoading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 15.64it/s]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  7.39it/s]You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:00<00:00,  7.46it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:00<00:00, 10.20it/s]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 76.02it/s]
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s][ALoading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 58.40it/s]
+Loading pipeline components...:  43%|████▎     | 3/7 [00:00<00:00, 17.68it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:00<00:00, 13.70it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:00<00:00, 18.04it/s]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+/home/pg1221/miniconda3/envs/HunyuanWorld/lib/python3.10/site-packages/moge/model/v1.py:172: UserWarning: The following deprecated/invalid arguments are ignored: {'output_mask': True, 'split_head': True}
+  warnings.warn(f"The following deprecated/invalid arguments are ignored: {deprecated_kwargs}")
+=============  load panorama inpaint models done =
+============= Now starting fg1 processing ===============
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:03<00:00,  3.61s/it]100%|██████████| 1/1 [00:03<00:00,  3.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 80659.69it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 1817.29it/s]
+============= Now starting fg2 processing ===============
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.20s/it]100%|██████████| 1/1 [00:01<00:00,  1.20s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 76260.07it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 29330.80it/s]
+============= Now starting sky processing ===============
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 17260.51it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]/home/pg1221/miniconda3/envs/HunyuanWorld/lib/python3.10/site-packages/transformers/models/grounding_dino/processing_grounding_dino.py:95: FutureWarning: The key `labels` is will return integer ids in `GroundingDinoProcessor.post_process_grounded_object_detection` output since v4.51.0. Use `text_labels` instead to retrieve string object names.
+  warnings.warn(self.message, FutureWarning)
+100%|██████████| 1/1 [00:06<00:00,  6.52s/it]100%|██████████| 1/1 [00:06<00:00,  6.53s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [23:43<19:22:23, 1423.33s/it][A
+  4%|▍         | 2/50 [44:19<17:30:29, 1313.12s/it][A
+  6%|▌         | 3/50 [1:06:39<17:18:20, 1325.53s/it][A
+  8%|▊         | 4/50 [1:33:26<18:21:26, 1436.67s/it][A
+ 10%|█         | 5/50 [1:57:47<18:03:57, 1445.28s/it][A
+ 12%|█▏        | 6/50 [2:23:22<18:02:15, 1475.80s/it][A
+ 14%|█▍        | 7/50 [2:50:02<18:06:42, 1516.34s/it][A
+ 16%|█▌        | 8/50 [3:16:26<17:56:34, 1537.97s/it][A
+ 18%|█▊        | 9/50 [3:43:40<17:51:27, 1568.00s/it][A
+ 20%|██        | 10/50 [4:09:23<17:20:12, 1560.32s/it][A
+ 22%|██▏       | 11/50 [4:29:43<15:46:35, 1456.30s/it][A
+ 24%|██▍       | 12/50 [4:50:14<14:38:50, 1387.64s/it][A
+ 26%|██▌       | 13/50 [5:10:29<13:43:31, 1335.46s/it][A
+ 28%|██▊       | 14/50 [5:30:53<13:01:00, 1301.69s/it][A
+ 30%|███       | 15/50 [5:51:19<12:25:56, 1278.76s/it][A
+ 32%|███▏      | 16/50 [6:11:37<11:54:19, 1260.57s/it][A
+ 34%|███▍      | 17/50 [6:31:53<11:26:01, 1247.31s/it][A
+ 36%|███▌      | 18/50 [6:52:16<11:01:12, 1239.76s/it][A
+ 38%|███▊      | 19/50 [7:12:35<10:37:24, 1233.71s/it][A
+ 40%|████      | 20/50 [7:33:01<10:15:38, 1231.28s/it][A
+ 42%|████▏     | 21/50 [7:53:29<9:54:41, 1230.41s/it] [A
+ 44%|████▍     | 22/50 [8:13:48<9:32:30, 1226.79s/it][A
+ 46%|████▌     | 23/50 [8:34:05<9:10:48, 1224.03s/it][A
+ 48%|████▊     | 24/50 [8:54:33<8:50:54, 1225.18s/it][A
+ 50%|█████     | 25/50 [9:14:51<8:29:36, 1223.06s/it][A
+ 52%|█████▏    | 26/50 [9:35:12<8:08:57, 1222.40s/it][A
+ 54%|█████▍    | 27/50 [9:55:39<7:49:07, 1223.80s/it][A
+ 56%|█████▌    | 28/50 [10:16:03<7:28:47, 1223.96s/it][A
+ 58%|█████▊    | 29/50 [10:36:22<7:07:51, 1222.46s/it][A
+ 60%|██████    | 30/50 [10:57:58<6:54:49, 1244.50s/it][A
+ 62%|██████▏   | 31/50 [11:22:27<6:55:21, 1311.65s/it][A
+ 64%|██████▍   | 32/50 [11:43:24<6:28:36, 1295.34s/it][A
+ 66%|██████▌   | 33/50 [12:09:34<6:30:23, 1377.84s/it][A
+ 68%|██████▊   | 34/50 [12:30:14<5:56:23, 1336.49s/it][A
+ 70%|███████   | 35/50 [12:57:52<5:58:11, 1432.76s/it][A
+ 72%|███████▏  | 36/50 [13:18:48<5:21:57, 1379.84s/it][A
+ 74%|███████▍  | 37/50 [13:41:58<4:59:36, 1382.78s/it][A
+ 76%|███████▌  | 38/50 [14:08:04<4:47:33, 1437.81s/it][A
+ 78%|███████▊  | 39/50 [14:28:35<4:12:14, 1375.84s/it][A
+ 80%|████████  | 40/50 [14:49:07<3:42:07, 1332.78s/it][A
+ 82%|████████▏ | 41/50 [15:09:25<3:14:43, 1298.12s/it][A
+ 84%|████████▍ | 42/50 [15:29:44<2:49:55, 1274.40s/it][A
+ 86%|████████▌ | 43/50 [15:50:10<2:26:59, 1259.87s/it][A
+ 88%|████████▊ | 44/50 [16:10:45<2:05:14, 1252.44s/it][A
+ 90%|█████████ | 45/50 [16:37:07<1:52:36, 1351.37s/it][A
+ 92%|█████████▏| 46/50 [16:58:44<1:29:00, 1335.00s/it][A
+ 94%|█████████▍| 47/50 [17:20:14<1:06:05, 1321.69s/it][A
+ 96%|█████████▌| 48/50 [17:44:35<45:26, 1363.26s/it]  [A
+ 98%|█████████▊| 49/50 [18:14:12<24:47, 1487.58s/it][A
+100%|██████████| 50/50 [18:40:17<00:00, 1510.77s/it][A100%|██████████| 50/50 [18:40:22<00:00, 1344.45s/it]
+100%|██████████| 1/1 [18:44:21<00:00, 67461.67s/it]100%|██████████| 1/1 [18:44:21<00:00, 67461.67s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]
+***Using super-resolution input image***
+🎨 Start to compose the world layer by layer...
+🏞️ Composing the background layer...
+🕐 Composing the sky layer...
+🎉 Congratulations! World composition completed successfully!
